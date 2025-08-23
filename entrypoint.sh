@@ -6,6 +6,15 @@ mkdir -p /root/.vnc/
 echo $VNCPWD | vncpasswd -f > /root/.vnc/passwd
 chmod 600 /root/.vnc/passwd
 
+# Set variables
+
+export SHELL=/bin/bash
+usermod --shell /bin/bash root
+chsh -s /bin/bash root
+echo "export SHELL=/bin/bash" >> /root/.profile
+
+update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/xfce4-terminal.wrapper 10
+
 # Start VNC server
 
 if [ $VNCEXPOSE = 1 ]
