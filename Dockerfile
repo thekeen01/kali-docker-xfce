@@ -34,11 +34,7 @@ ENV NOVNCPORT 8080
 # Install custom packages/services -- please add whatever you need here
 
 RUN apt-get -y install iputils-ping
-RUN apt-get -y install openvpn
-
-# Make root shell default to bash, you can adjust to whatever shell you prefer
-
-RUN usermod --shell /usr/bin/bash root
+RUN apt-get -y install openvpn xfce4-terminal
 
 # Entrypoint
 
