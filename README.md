@@ -10,6 +10,8 @@ git clone https://github.com/thekeen01/kali-docker-xfce.git
 
 cd kali-docker-xfce
 
+Edit Dockerfile to add whatever you need (kali apps or debian apps)
+
 docker build -t kalixfce .
 
 # To run
